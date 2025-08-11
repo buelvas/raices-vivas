@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light only" />
+    <title>Raíces Vivas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{ --fg:#0b1520; --muted:#52606d; --card:#ffffff; --border:#e8eef2; --blue:#2563eb; --green:#10b981; --bg:#f7fafc; }
+      *{box-sizing:border-box} html,body,#root{height:100%}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--fg)}
+      a{color:inherit;text-decoration:none}
+      .container{max-width:1120px;margin:0 auto;padding:20px}
+      .btn{padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#fff;display:inline-flex;gap:8px;align-items:center}
+      .btn.primary{background:linear-gradient(135deg,var(--blue),#22c55e);color:#fff;border:none}
+      .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;position:sticky;top:0;background:#ffffffcc;backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid var(--border);z-index:10}
+      .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+      .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px #10b9811f}
+      .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:24px 0}
+      .hero h1{font-size:clamp(32px,4vw,56px);line-height:1.05;margin:0}
+      .hero p{color:var(--muted)}
+      .kicker{color:#4f46e5;text-transform:uppercase;font-size:12px;letter-spacing:.12em;margin-bottom:8px}
+      .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px}
+      .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border);margin-bottom:8px}
+      .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .input{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:#fff}
+      .help{font-size:12px;color:var(--muted)}
+      .accordion .item{border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff}
+      .accordion summary{font-weight:600;cursor:pointer}
+      .table{width:100%;border-collapse:collapse}
+      .table td,.table th{border-bottom:1px solid var(--border);padding:10px;text-align:left}
+      @media (max-width: 900px){
+        .hero{grid-template-columns:1fr}
+        .grid{grid-template-columns:1fr 1fr}
+        .row{grid-template-columns:1fr}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

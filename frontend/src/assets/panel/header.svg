@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6f2ff"/>
+      <stop offset="70%" stop-color="#f5fbff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9fe3c1"/>
+      <stop offset="100%" stop-color="#6fc79f"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8e0ff"/>
+      <stop offset="100%" stop-color="#74c0e6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M0,520 C200,440 300,460 520,520 C710,565 900,500 1080,540 C1300,585 1450,560 1600,540 L1600,900 L0,900 Z" fill="#b7d7f1"/>
+  <path d="M0,600 C220,560 360,650 560,620 C760,590 980,660 1200,610 C1400,570 1520,630 1600,640 L1600,900 L0,900 Z" fill="url(#hill)"/>
+  <path d="M0,760 C260,720 420,730 640,760 C860,790 1100,780 1600,760 L1600,900 L0,900 Z" fill="url(#water)" opacity="0.95"/>
+  <g transform="translate(1180,580)">
+    <g transform="translate(0,0)"><rect x="-8" y="0" width="16" height="70" fill="#7f5b3a"/><circle cx="0" cy="-20" r="60" fill="#2f7d4c"/></g>
+    <g transform="translate(90,10)"><rect x="-8" y="0" width="16" height="70" fill="#7f5b3a"/><circle cx="0" cy="-24" r="54" fill="#2f7d4c"/></g>
+    <g transform="translate(170,-6)"><rect x="-8" y="0" width="16" height="70" fill="#7f5b3a"/><circle cx="0" cy="-22" r="48" fill="#2f7d4c"/></g>
+  </g>
+  <text x="80" y="160" font-family="Inter,Segoe UI,system-ui" font-size="64" font-weight="800" fill="#0b1520">Tecnología y territorio</text>
+  <text x="80" y="210" font-family="Inter,Segoe UI,system-ui" font-size="26" fill="#334155" opacity="0.9">Herramientas abiertas al servicio de comunidades</text>
+</svg>

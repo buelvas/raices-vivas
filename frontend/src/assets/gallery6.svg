@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#ecfdf5"/></linearGradient></defs>
+  <rect width="1200" height="700" rx="30" fill="url(#g)"/>
+  <circle cx="140" cy="560" r="300" fill="#a7f3d066"/><circle cx="1020" cy="120" r="220" fill="#93c5fd55"/>
+  <g font-family="Inter" fill="#0b1520"><text x="60" y="140" font-size="54" font-weight="800">Juventudes</text>
+  <text x="60" y="190" font-size="24" opacity="0.75">Innovación social</text></g></svg>

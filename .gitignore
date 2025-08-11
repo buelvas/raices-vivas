@@ -1,0 +1,6 @@
+backend/node_modules/
+frontend/node_modules/
+otros codigos/
+data.db
+data.db-shm
+data.db-wal

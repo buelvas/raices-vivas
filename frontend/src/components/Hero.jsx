@@ -1,7 +1,7 @@
 export default function Hero({ variant = 'urbano' }) {
   const imgSrc = variant === 'natural'
-    ? '/src/assets/hero_natural.jpg'
-    : '/src/assets/hero_urbano.jpg';
+    ? '/img/hero_natural.jpg'
+    : '/img/hero_urbano.jpg';
   return (
     <section className="hero">
       <div>

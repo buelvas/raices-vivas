@@ -22,9 +22,9 @@ export default function Panel() {
     if(!user) return null 
 
   const cards = [
-    { t:'Minga por el río', img:'/src/assets/panel/rio_photo.jpg', d:'Limpieza, señalización y educación ambiental.' },
-    { t:'Ruta de oficios', img:'/src/assets/panel/oficios_photo.jpg', d:'Visitas a talleres de carpintería y artesanía.' },
-    { t:'Huertas urbanas', img:'/src/assets/panel/huertas_photo.jpg', d:'Siembra colaborativa y trueque de cosechas.' },
+    { t:'Minga por el río', img:'/img/panel/rio_photo.jpg', d:'Limpieza, señalización y educación ambiental.' },
+    { t:'Ruta de oficios', img:'/img/panel/oficios_photo.jpg', d:'Visitas a talleres de carpintería y artesanía.' },
+    { t:'Huertas urbanas', img:'/img/panel/huertas_photo.jpg', d:'Siembra colaborativa y trueque de cosechas.' },
   ]
 
   return (
@@ -39,7 +39,7 @@ export default function Panel() {
             <button className="btn" onClick={async() => { await authLogout(); setUser(null); nav('/login') }}>Cerrar sesión</button>
           </div>
         </div>
-        <img src="/src/assets/panel/header.svg" alt="Tecnología y territorio"
+        <img src="/img/panel/header.svg" alt="Tecnología y territorio"
           style={{ width: '100%', borderRadius: 18, border: '1px solid var(--border)' }} />
       </div>
 

@@ -14,7 +14,7 @@ export default function App() {
           setUser(me.user)
         } catch {
           setUser(null)
-          navigate('/login')
+          navigate('/')
         }
       })()
     }, [])

@@ -9,13 +9,15 @@ const SALT_ROUNDS = 10;
 
 // Helpers
 function setAuthCookie(res, token) {
-  const secure = (process.env.COOKIE_SECURE === 'true');
+  const secure = process.env.COOKIE_SECURE === 'true'       // en prod: true
+  const sameSite = process.env.COOKIE_SAMESITE || 'none'    // dominios distintos => 'none'
   res.cookie('token', token, {
     httpOnly: true,
-    sameSite: 'lax',
-    secure,
+    sameSite,        // 'none' para cross-site
+    secure,          // true en HTTPS
+    path: '/',       // importante para que aplique a todo el sitio
     maxAge: 2 * 60 * 60 * 1000 // 2h
-  });
+  })
 }
 
 // --- Validators ---
@@ -83,7 +85,7 @@ router.post('/login',
       const token = signToken({ id: row.id, email: row.email });
       setAuthCookie(res, token);
 
-      return res.json({ message: 'Login exitoso', startedAt });
+      return res.json({ message: 'Login exitoso', startedAt, token });
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: 'Error en autenticación' });
@@ -92,8 +94,10 @@ router.post('/login',
 );
 
 router.post('/logout', (req, res) => {
-  res.clearCookie('token');
-  res.json({ message: 'Sesión cerrada' });
+  const secure = process.env.COOKIE_SECURE === 'true'
+  const sameSite = process.env.COOKIE_SAMESITE || 'none'
+  res.clearCookie('token', { httpOnly: true, sameSite, secure, path: '/' })
+  res.json({ message: 'Sesión cerrada' })
 });
 
 router.get('/me', authenticate, (req, res) => {
